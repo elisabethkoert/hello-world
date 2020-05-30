@@ -2,6 +2,9 @@ import sys
 import neuron1 as n1
 import math
 import functions as f
+import numpy as np
+import globalvariables as gv
+from matplotlib import pyplot as plt
 
 
 def runmain():
@@ -32,20 +35,6 @@ def runmain():
     makeFig4a(x,V_e,AF)
 
 
-
-def makeFig4a(x,V_e,AF):
-    fig, ax = plt.subplots(constrained_layout=True)
-    plt.plot(x*1e3,V_e[0]*1e3, label='extracellular potential for stimulation with -290 µA')
-
-    
-    plt.plot(x*1e3,AF[0]*1e-4, label='AF for stimulation with -290 µA')
-    plt.plot(x*1e3,AF[1]*1e-4, label='AF for stimulation with 1450 µA')
-    
-    ax.set_ylabel('extracellular Potential [mV]')
-    secaxy = ax.secondary_yaxis('right')
-    secaxy.set_ylabel('AF [V/cm2]' )
-    plt.legend(loc=[0,0.2])
-    plt.show()
 
 
     

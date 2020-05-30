@@ -60,6 +60,10 @@ def calculateVeR(r=1e-3,I_el=-290e-6):
     Ve=(gv.rho_e*I_el)/(4*math.pi*r)#Volt
     return Ve
 
+
+
+
+
 def plotSingle(y,x,legende=None,title=None,xlabel='position [mm]',ylabel='extracellular potential [mV]',xfromSI=1e3,yfromSI=1e3):
     """
     Plot a single plot with the possibility to change the units awy from SI
@@ -103,6 +107,9 @@ def plotMultiple(y,x,legende=None,title=None,xlabel='position [mm]',ylabel='extr
 
 
 def makeFig4a(x,V_e,AF):
+    """
+    reproduce the plot from rattay 1986
+    """
     fig, ax = plt.subplots(constrained_layout=True)
     plt.plot(x*1e3,V_e[0]*1e3, label='extracellular potential for stimulation with -290 µA')
 
