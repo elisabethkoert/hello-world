@@ -15,3 +15,10 @@ doprint=False #allows output about what is done at the moment
 folder='test' #for a specific saving location
 
 rho_e=3 #Ohm*m  from 0.3kOhmcm
+dt=dt=(50-0)/10000
+
+
+#make a stimulus current
+I_tstart=0.0
+I_tend=1.0
+I_amplitude=150

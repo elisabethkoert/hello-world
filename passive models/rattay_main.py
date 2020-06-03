@@ -2,6 +2,7 @@ import sys
 import neuron1 as n1
 import math
 import functions as f
+import functionsHH as fHH
 import numpy as np
 import globalvariables as gv
 from matplotlib import pyplot as plt
@@ -9,8 +10,8 @@ from matplotlib import pyplot as plt
 
 def runmain():
     
-    #.buildanddraw()
     
+    """
     #rattay 1986 unmyleinated axon:
     #replicate fig. 4
     gv.rho_e=3 #Ohm*m  from 0.3kOhmcm everything is kept in SI and only changed during plotting
@@ -32,10 +33,11 @@ def runmain():
     #f.plotMultiple(AF, x, legende=['stimulation with -290 µA','1450 µA'], ylabel='dVe2/d2x [V/cm2]',yfromSI=1e-4)
     
     #try to make joint 
-    makeFig4a(x,V_e,AF)
+    f.makeFig4a(x,V_e,AF)
+    """
 
-
-
+    #fHH.calculateHH()
+    thresholds=fHH.makeStrengthDurationCurve()
 
     
     
